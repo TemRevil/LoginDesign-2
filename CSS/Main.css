@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'Cairo';
+    font-weight: 300;
+    src: url(../Fonts/Cairo/static/Cairo-Regular.ttf);
+}
+@font-face {
+    font-family: 'Cairo';
+    font-weight: 700;
+    src: url(../Fonts/Cairo/static/Cairo-Bold.ttf);
+}
+@font-face {
+    font-family: 'Rubik';
+    font-weight: 300;
+    src: url(../Fonts/Rubik/static/Rubik-Regular.ttf);
+}
+@font-face {
+    font-family: 'Cairo';
+    font-weight: 700;
+    src: url(../Fonts/Rubik/static/Rubik-Bold.ttf);
+}
+@font-face {
+    font-family: 'Exo';
+    font-weight: 300;
+    src: url(../Fonts/Exo/static/Exo2-Regular.ttf);
+}
+@font-face {
+    font-family: 'Exo';
+    font-weight: 700;
+    src: url(../Fonts/Exo/static/Exo2-Bold.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 100%;
+    height: 880px;
+    background-color: #124;
+}
+::selection {
+    background-color: #0080ff8e;
+    color: white;
+}
+
+.flex {
+    display: flex;
+}
+.row {
+    flex-direction: row;
+}
+.col {
+    flex-direction: column;
+}
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Rubik', 'Exo', 'Cairo';
+    font-weight: 700;
+    font-size: 72px;
+    color: #124;
+}
+.text {
+    font-family: 'Exo', 'Rubik', 'Cairo';
+    font-weight: 100;
+    font-size: 22px;
+    color: #124;
+}
+/* ---------------------------------------------- */
+/* Main Content */
+.login {
+    width: 50%;
+    height: 100%;
+    background-image: url(../Background/plan-shape.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1000px;
+}
+
+.icons {
+    color: #124;
+}
+.input {
+    padding: 5px 20px;
+    border: 0.5px #124 solid;
+    border-radius: 3px;
+    outline: none;
+}
+.input::placeholder {
+    color: #124;
+    opacity: 0.3;
+}
+
+.log-btn {
+    padding: 10px 20px;
+    background-image: linear-gradient(45deg, #0055ff, #4c85ff);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Exo', 'Rubik', 'Cairo';
+    font-weight: 100;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.2s 0s linear;
+}
+.log-btn:hover {
+    background-image: linear-gradient(45deg, #4c85ff, #0055ff);
+}
+.log-btn:active {
+    scale: 0.95;
+}
+
+.log-way {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s 0s linear;
+}
+.log-way:hover {
+    scale: 1.05;
+}
+.log-way:active {
+    scale: 0.95;
+}
+.log-way svg {
+    width: 100%;
+    height: 100%;
+}
+
+.login a {
+    font-family: 'Rubik', 'Exo', 'Cairo';
+    position: relative;
+    top: 190px;
+    color: white;
+}
+/* ---------------------------------------------- */
+/* Background */
+.back {
+    width: 50%;
+    height: 100%;
+    background-image: url(../Background/LofiWinterCampin.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.mock {
+    width: 100%;
+    height: 100%;
+    padding: 5px 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    backdrop-filter: brightness(0.7);
+    overflow: hidden;
+    transition: 0.2s 0s linear;
+}
+.mock:hover {
+    backdrop-filter: blur(5px) brightness(1.5);
+}
+.mock:hover .icons, .mock:hover .title, .mock:hover .text {
+    scale: 1.1;
+}
+.mock .title {
+    font-size: 100px;
+    color: #fff;
+    transition: 0.2s 0s linear;
+}
+.mock .icons {
+    position: absolute;
+    top: 49%;
+    left: 45px;
+    font-size: 232px;
+    color: #fff;
+    transition: 0.2s 0s linear;
+}
+.mock .text {
+    width: fit-content;
+    color: white;
+    transition: 0.2s 0s linear;
+}
+/* ---------------------------------------------- */
+/* Media */
+@media (max-width: 900px) {
+    .login {
+        width: 100%;
+        background-size: 1000px;
+    }
+    .back {
+        display: none;
+    }
+}
